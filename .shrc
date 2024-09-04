@@ -1,0 +1,17 @@
+# MAKE THE FOLLOWING CHANGES IN .zshrc:
+#   - set ZSH_THEME="gerry"
+#   - set COMPLETION_WAITING_DOTS="true"
+#   - set plugins=(git colored-man-pages colorize pip python brew macos mytimer)
+#   - Add the end,
+#       source ~/.oh-my-zsh/.shrc
+#       source ~/.oh-my-zsh/custom/scripts/zsh_keybindings_setup.sh
+
+# Aliases
+source ~/.scripts/aliases.sh
+
+# colors
+export CLICOLOR=1
+color_prompt=yes
+
+# Export Variables
+export EDITOR="code --wait"
