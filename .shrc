@@ -7,7 +7,8 @@
 #       source ~/.oh-my-zsh/custom/scripts/zsh_keybindings_setup.sh
 
 # Aliases
-source ~/.scripts/aliases.sh
+source ~/.oh-my-zsh/custom/scripts/aliases.sh
+PATH=$PATH:~/.oh-my-zsh/custom/scripts
 
 # colors
 export CLICOLOR=1
