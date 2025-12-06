@@ -22,13 +22,16 @@ format_ms() {
 }
 
 function mytimer_preexec() {
-  timer=$(($(date +%s)/1000000))
+  timer=$(($(date +%s%N)/1000000))
 }
 
 function mytimer_precmd() {
   if [ $timer ]; then
-    now=$(($(date +%s)/1000000))
+    now=$(($(date +%s%N)/1000000))
     elapsed=$(($now-$timer))
+    if [[ $elapsed -gt 1000 ]]; then
+      printf '\a'
+    fi
     export RPROMPT="%F{cyan}[ $(format_ms $elapsed) ] %{$reset_color%}"
     unset timer
   fi
